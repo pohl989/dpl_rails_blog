@@ -1,0 +1,9 @@
+<h1>Pages</h1>
+<p><%= link_to "Create a New Blog Post", new_page_path%></p>
+<%- @pages.each do |page|%>
+  <div class = "page">
+    <h2><%= link_to "#{page.title}", page %></h2>
+    <h4>Author: <%=page.author%></h4>
+    <p><%= page.body%></p>
+  </div>
+<%-end%>
